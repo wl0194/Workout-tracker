@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const WorkoutSchema = new mongoose.Schema({ 
-    day:{
+const WorkoutSchema = new mongoose.Schema({
+    day: {
         type: Date,
         default: () => new Date(),
     },
-    exercises:[
+    exercises: [
         {
             type: {
                 type: String,

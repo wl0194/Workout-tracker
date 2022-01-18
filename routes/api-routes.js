@@ -1,17 +1,15 @@
 const router = require('express').Router();
-const Workout = require('../models/Workout.js');
-const db = require('../config/config.js');
+const { db } = require('../config/config.js');
 
 // API routes
 
 router.get("/api/workouts", (req, res) => {
-    db.Workout.find({})
-        .then(dbWorkout => {
+    console.log(db);
+    db.Workout.find({},
+        (err, dbWorkout) => {
             res.json(dbWorkout);
-        })
-        .catch(err => {
-            res.json(err);
-        });
+        }
+        );
 });
 
 router.put("/api/workouts/:id", ({ body, params }, res) => {
@@ -47,3 +45,4 @@ router.get("/api/workouts/range", function (req, res) {
 });
 
 module.exports = router;
+
