@@ -31,12 +31,6 @@ const WorkoutSchema = new mongoose.Schema({
         }
     ],
 },
-{
-    // include any virtual properties when data is requested
-    toJson: {
-        virtuals: true
-    }
-}
 );
 
 
