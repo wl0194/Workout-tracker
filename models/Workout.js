@@ -41,6 +41,8 @@ const WorkoutSchema = new mongoose.Schema({
 
 WorkoutSchema.virtual("totalDuration").get(() => {
     if(typeof this.exercies === 'undefined'){
+        return 0;
+    }
     // "reduce" array of exercises down to just the sum of their durations
     return this.exercises.reduce((total, exercise) => {
       return total + exercise.duration;
