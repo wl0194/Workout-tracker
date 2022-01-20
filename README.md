@@ -1,61 +1,76 @@
-# Unit 18 Nosql Homework: Workout Tracker
+# Workout Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+This is a fitness application built with MongoDB database with a Mongo database with a Mongoose Schema and routes with Express.
+The user will be able to view create and track daily workouts. The user will be able to log multiple exercises in a workout on a given day. The user will also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, the user should be able to track their distance traveled.
 
-## User Story
+## Table of Contents
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+* [Installation](#installation)
+* [Usage](#usage)
+* [Links](#Links)
+* [Features](#Features)
+* [License](#License)
 
-## Business Context
+## Installation
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+1. Download or clone repository
+2. `npm install` to install the required npm packages to run
+3. To have a prepopulated database, run `npm seed`
 
-## Acceptance Criteria
+## Usage
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+* Application will be invoked by using the following command:
 
-The user should be able to:
+  `node server.js`
 
-  * Add exercises to the most recent workout plan.
+* Open your browser and go to
+  
+  `http://localhost:3000`
 
-  * Add new exercises to a new workout plan.
+  The home page will show the user's last workout details, then the user will have the option to select **Continue Workout** or **New Workout**
 
-  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
 
-  * View the total duration of each workout from the past seven workouts on the `stats` page.
+* After selecting an option, the user can add their exercise by choosing an **Exercise Type**
 
-> **Important:** Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/), the [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/), and the [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
+  * *Resistance* or
+  * *Cardio*
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
 
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+* If *Resistance* is selected, the user input the following required fields:
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+  * Exercise Name
+  * Weight in lbs
+  * Sets
+  * Reps
+  * Duration in minutes
 
-## Commit Early and Often
+* If *Cardio* is selected, the user input the following required fields:
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
+  * Name
+  * Distance in miles
+  * Duration in minutes
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+* After the required the fields are entered, the user can select **Complete** or **Add Exercise** to save the workout
 
-Follow these guidelines for committing:
+* There is a **Dashboard** that tracks all the workouts that was entered in graphic details
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+## Links
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+* [Github](https://github.com/wl0194)
+* [Live Heroku App](https://lit-forest-07249.herokuapp.com/)
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+## Features
 
-We want you to have well over 200 commits by graduation, so commit early and often!
+* Node
+* Express
+* JavaScript
+* MongoDB
+* Mongoose
 
-## Submission on BCS
+## License
 
-You are required to submit the following:
+  Copyright (c) Amy Hwang. All rights reserved.
 
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+  ![License Badge](https://img.shields.io/github/license/mmeii/workout-tracker) ![Top Language](https://img.shields.io/github/languages/top/mmeii/workout-tracker)
