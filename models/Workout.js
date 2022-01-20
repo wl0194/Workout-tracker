@@ -46,7 +46,7 @@ WorkoutSchema.virtual("totalDuration").get(() => {
     // "reduce" array of exercises down to just the sum of their durations
     return this.exercises.reduce((total, exercise) => {
       return total + exercise.duration;
-    }, 0);
+    })
   });
 
 
