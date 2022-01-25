@@ -73,4 +73,5 @@ The user will be able to view create and track daily workouts. The user will be 
 
   Copyright (c) Amy Hwang. All rights reserved.
 
-  ![License Badge](https://img.shields.io/github/license/mmeii/workout-tracker) ![Top Language](https://img.shields.io/github/languages/top/mmeii/workout-tracker)
+  ![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)
+  ![Top Language](https://img.shields.io/github/languages/top/wl0194/Workout-tracker)
