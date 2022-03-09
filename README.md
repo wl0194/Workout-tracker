@@ -11,6 +11,10 @@ The user will be able to view create and track daily workouts. The user will be 
 * [Features](#Features)
 * [License](#License)
 
+## Demo
+
+![Weather Dashboard Demo](Assets/workout-tracker.png)
+
 ## Installation
 
 1. Download or clone repository
